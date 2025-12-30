@@ -15,7 +15,7 @@ struct StartTab: View {
                     .tabItem {
                     Label("TripMap", systemImage: "map")
                 }
-                DestinationLocationsMapView()
+                DestinationLocationsMapView(destinations: [.paris])
                     .tabItem {
                         Label("Destinations", systemImage: "globe.desk")
                     }

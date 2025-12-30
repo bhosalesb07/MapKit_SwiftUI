@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0451E4A32F0422E400A0B7F4 /* MTPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451E4A22F0422E400A0B7F4 /* MTPlacemark.swift */; };
+		0451E4A52F04232300A0B7F4 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451E4A42F04232300A0B7F4 /* Destination.swift */; };
+		0451E4A92F04436000A0B7F4 /* DestinationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451E4A82F04436000A0B7F4 /* DestinationsListView.swift */; };
 		0456B94C2F02C06E003DADCC /* MapKit_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456B94B2F02C06E003DADCC /* MapKit_SwiftUIApp.swift */; };
 		0456B9502F02C071003DADCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0456B94F2F02C071003DADCC /* Assets.xcassets */; };
 		0456B9542F02C071003DADCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0456B9532F02C071003DADCC /* Preview Assets.xcassets */; };
@@ -14,9 +17,17 @@
 		0456B95F2F02C4D5003DADCC /* TripMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456B95E2F02C4D5003DADCC /* TripMapView.swift */; };
 		0456B9612F02C4E8003DADCC /* DestinationLocationsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456B9602F02C4E8003DADCC /* DestinationLocationsMapView.swift */; };
 		0456B9632F02DAA1003DADCC /* SampleLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456B9622F02DAA1003DADCC /* SampleLocations.swift */; };
+		04F3F53B2F03A1AC005375DD /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3F53A2F03A1AC005375DD /* Models.swift */; };
+		04F3F53D2F03A1E7005375DD /* extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3F53C2F03A1E7005375DD /* extentions.swift */; };
+		04F3F53F2F03A227005375DD /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3F53E2F03A227005375DD /* enums.swift */; };
+		04F3F5422F03A295005375DD /* PlaceMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3F5412F03A295005375DD /* PlaceMarkerView.swift */; };
+		04F3F5442F03A2C7005375DD /* MonogramMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3F5432F03A2C7005375DD /* MonogramMarkerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0451E4A22F0422E400A0B7F4 /* MTPlacemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTPlacemark.swift; sourceTree = "<group>"; };
+		0451E4A42F04232300A0B7F4 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		0451E4A82F04436000A0B7F4 /* DestinationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationsListView.swift; sourceTree = "<group>"; };
 		0456B9482F02C06E003DADCC /* MapKit_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKit_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0456B94B2F02C06E003DADCC /* MapKit_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKit_SwiftUIApp.swift; sourceTree = "<group>"; };
 		0456B94F2F02C071003DADCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,6 +37,11 @@
 		0456B95E2F02C4D5003DADCC /* TripMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapView.swift; sourceTree = "<group>"; };
 		0456B9602F02C4E8003DADCC /* DestinationLocationsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationLocationsMapView.swift; sourceTree = "<group>"; };
 		0456B9622F02DAA1003DADCC /* SampleLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLocations.swift; sourceTree = "<group>"; };
+		04F3F53A2F03A1AC005375DD /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		04F3F53C2F03A1E7005375DD /* extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extentions.swift; sourceTree = "<group>"; };
+		04F3F53E2F03A227005375DD /* enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
+		04F3F5412F03A295005375DD /* PlaceMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkerView.swift; sourceTree = "<group>"; };
+		04F3F5432F03A2C7005375DD /* MonogramMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonogramMarkerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +74,10 @@
 		0456B94A2F02C06E003DADCC /* MapKit_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				0456B95D2F02C49A003DADCC /* Destinations Tab */,
-				0456B95C2F02C48B003DADCC /* My trip tab */,
+				04F3F5452F03A310005375DD /* Views */,
+				04F3F5392F03A184005375DD /* Helper */,
+				04F3F5382F03A17E005375DD /* Models */,
 				0456B94B2F02C06E003DADCC /* MapKit_SwiftUIApp.swift */,
-				0456B9622F02DAA1003DADCC /* SampleLocations.swift */,
-				0456B95A2F02C189003DADCC /* StartTab.swift */,
 				0456B94F2F02C071003DADCC /* Assets.xcassets */,
 				0456B9512F02C071003DADCC /* MapKit_SwiftUI.entitlements */,
 				0456B9522F02C071003DADCC /* Preview Content */,
@@ -81,7 +96,7 @@
 		0456B95C2F02C48B003DADCC /* My trip tab */ = {
 			isa = PBXGroup;
 			children = (
-				0456B9602F02C4E8003DADCC /* DestinationLocationsMapView.swift */,
+				0456B95E2F02C4D5003DADCC /* TripMapView.swift */,
 			);
 			path = "My trip tab";
 			sourceTree = "<group>";
@@ -89,9 +104,50 @@
 		0456B95D2F02C49A003DADCC /* Destinations Tab */ = {
 			isa = PBXGroup;
 			children = (
-				0456B95E2F02C4D5003DADCC /* TripMapView.swift */,
+				0451E4A82F04436000A0B7F4 /* DestinationsListView.swift */,
+				04F3F5402F03A270005375DD /* CustomViews */,
+				0456B9602F02C4E8003DADCC /* DestinationLocationsMapView.swift */,
 			);
 			path = "Destinations Tab";
+			sourceTree = "<group>";
+		};
+		04F3F5382F03A17E005375DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04F3F53A2F03A1AC005375DD /* Models.swift */,
+				0451E4A22F0422E400A0B7F4 /* MTPlacemark.swift */,
+				0451E4A42F04232300A0B7F4 /* Destination.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04F3F5392F03A184005375DD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0456B9622F02DAA1003DADCC /* SampleLocations.swift */,
+				04F3F53C2F03A1E7005375DD /* extentions.swift */,
+				04F3F53E2F03A227005375DD /* enums.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		04F3F5402F03A270005375DD /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				04F3F5412F03A295005375DD /* PlaceMarkerView.swift */,
+				04F3F5432F03A2C7005375DD /* MonogramMarkerView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		04F3F5452F03A310005375DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0456B95A2F02C189003DADCC /* StartTab.swift */,
+				0456B95D2F02C49A003DADCC /* Destinations Tab */,
+				0456B95C2F02C48B003DADCC /* My trip tab */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,11 +220,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F3F5422F03A295005375DD /* PlaceMarkerView.swift in Sources */,
 				0456B9632F02DAA1003DADCC /* SampleLocations.swift in Sources */,
+				0451E4A52F04232300A0B7F4 /* Destination.swift in Sources */,
 				0456B95B2F02C18A003DADCC /* StartTab.swift in Sources */,
 				0456B9612F02C4E8003DADCC /* DestinationLocationsMapView.swift in Sources */,
+				04F3F53D2F03A1E7005375DD /* extentions.swift in Sources */,
+				04F3F53B2F03A1AC005375DD /* Models.swift in Sources */,
+				04F3F5442F03A2C7005375DD /* MonogramMarkerView.swift in Sources */,
+				0451E4A32F0422E400A0B7F4 /* MTPlacemark.swift in Sources */,
 				0456B94C2F02C06E003DADCC /* MapKit_SwiftUIApp.swift in Sources */,
+				04F3F53F2F03A227005375DD /* enums.swift in Sources */,
 				0456B95F2F02C4D5003DADCC /* TripMapView.swift in Sources */,
+				0451E4A92F04436000A0B7F4 /* DestinationsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
