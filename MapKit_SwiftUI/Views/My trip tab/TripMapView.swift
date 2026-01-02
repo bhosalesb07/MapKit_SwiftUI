@@ -10,11 +10,10 @@ import SwiftUI
 struct TripMapView: View {
     var body: some View {
         Text("Hello, Trip Map View!")
+        
     }
+}
+#Preview {
+    TripMapView()
 }
 
-struct TripMapView_Previews: PreviewProvider {
-    static var previews: some View {
-        TripMapView()
-    }
-}

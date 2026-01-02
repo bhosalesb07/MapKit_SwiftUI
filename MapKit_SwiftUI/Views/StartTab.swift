@@ -15,20 +15,19 @@ struct StartTab: View {
                     .tabItem {
                     Label("TripMap", systemImage: "map")
                 }
-                DestinationLocationsMapView(destinations: [.paris])
+                DestinationLocationsMapView()
                     .tabItem {
                         Label("Destinations", systemImage: "globe.desk")
                     }
             }
-            .toolbarBackground(Color(red: 16/255, green: 32/255, blue: 72/255).opacity(0.8), for: .tabBar)
+            
+            .toolbarBackground(Color("AppBlue").opacity(0.8), for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
             .toolbarColorScheme(.dark, for: .tabBar)
         }
     }
 }
 
-struct StartTab_Previews: PreviewProvider {
-    static var previews: some View {
-        StartTab()
-    }
+#Preview {
+    StartTab()
 }
