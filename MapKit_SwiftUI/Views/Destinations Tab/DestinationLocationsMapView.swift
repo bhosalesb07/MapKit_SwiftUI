@@ -7,73 +7,74 @@
 
 import SwiftUI
 import MapKit
+import SwiftData
+
 
 struct DestinationLocationsMapView: View {
     
     @State private var cameraPosition:MapCameraPosition = .automatic
     @State private var visibleRegion: MKCoordinateRegion?
+    var destination: Destination
+    
     var body: some View {
-        Map(position:$cameraPosition){
-            Marker("Moulin Rouge", coordinate: .moulinRouge)
-            Marker(coordinate: .arcDeTriomphe) {
-                Label("Arc De Triomphe", systemImage: "star.fill")
+        @Bindable var destination = destination
+        //MARK: diffirent marker Styles
+        //MapMarker()
+        
+        VStack{
+            LabeledContent{
+                TextField("Enter destination name", text: $destination.name)
+                    .textFieldStyle(.roundedBorder)
+                    .foregroundStyle(.primary)
+            } label: {
+                Text("Name: ")
             }
-            .tint(.yellow)
-            
-            Marker("Eiffel Tower", image: "eiffelTower", coordinate: .eiffelTower)
-                .tint(.blue)
-            
-            Marker("", monogram: Text("GN"), coordinate: .gareDuNord)
-                .tint(Color("AccentColor"))
-            
-            Marker("Louvre", systemImage: "person.crop.artframe", coordinate: .louvre)
-                .tint(Color("AppBlue"))
-            
-            Annotation("Notre Dame", coordinate: .notreDame) {
-                Image(systemName: "star")
-                    .imageScale(.large)
-                    .foregroundStyle(.red)
-                    .padding(10)
-                    .background(.white)
-                    .clipShape(Circle())
-                
-            }
-            Annotation("Sacre Coeur", coordinate: .sacreCoeur, anchor: .center) {
-                Image(.sacreCoeur)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30,height: 30)
-            }
-            Annotation("Pantheon", coordinate: .pantheon) {
-                Image(systemName: "mappin")
-                    .imageScale(.large)
-                    .foregroundStyle(.red)
-                    .padding(5)
-                    .overlay {
-                        Circle()
-                            .strokeBorder(.red,lineWidth: 2)
+            HStack {
+                Text("Adjust the map to set the region for your destination.")
+                    .foregroundStyle(.secondary)
+                Spacer()
+                Button("Set region") {
+                    if let visibleRegion {
+                        destination.latitude = visibleRegion.center.latitude
+                        destination.longitude = visibleRegion.center.longitude
+                        destination.latitudeDelta = visibleRegion.span.latitudeDelta
+                        destination.longitudeDelta = visibleRegion.span.longitudeDelta
                     }
-                
+                }
+                .buttonStyle(.borderedProminent)
             }
-            MapCircle(center: CLLocationCoordinate2D(latitude: 48.856788, longitude: 2.351077), radius: 5000)
-                .foregroundStyle(.red.opacity(0.5))
+        }
+        .padding(.horizontal)
+        Map(position:$cameraPosition){
+            ForEach(destination.placemarks){
+                placemark in
+                Marker(placemark.name, systemImage: "star", coordinate: placemark.cordinate)
+                    .tint(.yellow)
+            }
             
         }
+        .navigationTitle("Destinations")
+        .navigationBarTitleDisplayMode(.inline)
         .onMapCameraChange(frequency: .onEnd){ context in
             visibleRegion = context.region
         }
         .onAppear{
-            let paris = CLLocationCoordinate2D(latitude: 48.856788, longitude: 2.351077)
-            let parisSpan = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
-            let parisRegion = MKCoordinateRegion(center: paris, span: parisSpan)
-            cameraPosition = .region(parisRegion)
+            if let region = destination.region{
+                cameraPosition = .region(region)
+            }
         }
-        
     }
 }
 
 #Preview{
-    DestinationLocationsMapView()
+    
+    let container = Destination.preview
+    let fetchDescriptor = FetchDescriptor<Destination>()
+    let destination = try! container.mainContext.fetch(fetchDescriptor)[0]
+    return NavigationStack {
+        DestinationLocationsMapView(destination: destination)
+    }
+    
 }
 
 

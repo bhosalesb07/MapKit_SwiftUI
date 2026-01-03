@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct MapKit_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             StartTab()
-        }
+        }.modelContainer(for: Destination.self)
     }
 }
