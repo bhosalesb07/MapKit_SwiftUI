@@ -13,6 +13,7 @@ struct MapKit_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             StartTab()
-        }.modelContainer(for: Destination.self)
+        }
+        .modelContainer(for: Destination.self)
     }
 }

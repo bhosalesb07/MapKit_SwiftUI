@@ -14,11 +14,13 @@
 		0456B95F2F02C4D5003DADCC /* TripMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456B95E2F02C4D5003DADCC /* TripMapView.swift */; };
 		0456B9612F02C4E8003DADCC /* DestinationLocationsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456B9602F02C4E8003DADCC /* DestinationLocationsMapView.swift */; };
 		0456B9632F02DAA1003DADCC /* SampleLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456B9622F02DAA1003DADCC /* SampleLocations.swift */; };
+		04B8D9792F0C2F93009C752A /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8D9782F0C2F93009C752A /* LocationDetailView.swift */; };
 		04C9DD532F07B40600C5FD67 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C9DD522F07B40600C5FD67 /* Colors.xcassets */; };
 		04C9DD562F07D08200C5FD67 /* Destinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DD552F07D08200C5FD67 /* Destinations.swift */; };
 		04C9DD582F07D29000C5FD67 /* MTPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DD572F07D29000C5FD67 /* MTPlacemark.swift */; };
 		04C9DD5A2F07D8E100C5FD67 /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DD592F07D8E100C5FD67 /* MapMarker.swift */; };
 		04C9DD5C2F07DDAA00C5FD67 /* DestinationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DD5B2F07DDAA00C5FD67 /* DestinationsListView.swift */; };
+		04DB9D502F0B84C100721C09 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB9D4F2F0B84C100721C09 /* MapManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +33,13 @@
 		0456B95E2F02C4D5003DADCC /* TripMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapView.swift; sourceTree = "<group>"; };
 		0456B9602F02C4E8003DADCC /* DestinationLocationsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationLocationsMapView.swift; sourceTree = "<group>"; };
 		0456B9622F02DAA1003DADCC /* SampleLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLocations.swift; sourceTree = "<group>"; };
+		04B8D9782F0C2F93009C752A /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		04C9DD522F07B40600C5FD67 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		04C9DD552F07D08200C5FD67 /* Destinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destinations.swift; sourceTree = "<group>"; };
 		04C9DD572F07D29000C5FD67 /* MTPlacemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTPlacemark.swift; sourceTree = "<group>"; };
 		04C9DD592F07D8E100C5FD67 /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		04C9DD5B2F07DDAA00C5FD67 /* DestinationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationsListView.swift; sourceTree = "<group>"; };
+		04DB9D4F2F0B84C100721C09 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 		0456B94A2F02C06E003DADCC /* MapKit_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				04B8D9772F0C2F33009C752A /* Shared Views */,
+				04DB9D4E2F0B849000721C09 /* Services */,
 				04C9DD542F07D06C00C5FD67 /* Models */,
 				04F3F5452F03A310005375DD /* Views */,
 				04F3F5392F03A184005375DD /* Helper */,
@@ -106,6 +112,14 @@
 			path = "Destinations Tab";
 			sourceTree = "<group>";
 		};
+		04B8D9772F0C2F33009C752A /* Shared Views */ = {
+			isa = PBXGroup;
+			children = (
+				04B8D9782F0C2F93009C752A /* LocationDetailView.swift */,
+			);
+			path = "Shared Views";
+			sourceTree = "<group>";
+		};
 		04C9DD542F07D06C00C5FD67 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +127,14 @@
 				04C9DD572F07D29000C5FD67 /* MTPlacemark.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		04DB9D4E2F0B849000721C09 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				04DB9D4F2F0B84C100721C09 /* MapManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		04F3F5392F03A184005375DD /* Helper */ = {
@@ -206,10 +228,12 @@
 			files = (
 				0456B9632F02DAA1003DADCC /* SampleLocations.swift in Sources */,
 				0456B95B2F02C18A003DADCC /* StartTab.swift in Sources */,
+				04B8D9792F0C2F93009C752A /* LocationDetailView.swift in Sources */,
 				04C9DD5A2F07D8E100C5FD67 /* MapMarker.swift in Sources */,
 				0456B9612F02C4E8003DADCC /* DestinationLocationsMapView.swift in Sources */,
 				0456B94C2F02C06E003DADCC /* MapKit_SwiftUIApp.swift in Sources */,
 				04C9DD582F07D29000C5FD67 /* MTPlacemark.swift in Sources */,
+				04DB9D502F0B84C100721C09 /* MapManager.swift in Sources */,
 				04C9DD562F07D08200C5FD67 /* Destinations.swift in Sources */,
 				04C9DD5C2F07DDAA00C5FD67 /* DestinationsListView.swift in Sources */,
 				0456B95F2F02C4D5003DADCC /* TripMapView.swift in Sources */,
@@ -349,7 +373,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -385,7 +409,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
